@@ -19,19 +19,27 @@ const routes = [
     {
       path:'/main',
       name:'main',
-      component:()=>import('../views/main')
-    },
-    {
-      path:'/person',
-      name:'person',
-      component:()=>import('../views/person/index'),
+      component:()=>import('../views/main'),
       children:[
-        {path:'/person/main',
-         name:'index',
-         component:()=>import('../views/person/person')
-      } 
+         {
+           path:'/main/password',
+           name:'password',
+           component:()=>import('../views/uerManage/password')
+         },
+         {
+           path:'/main/message',
+           name:'message',
+           component:()=>import('../views/uerManage/message')
+         },
+         {
+           path:'/main/student',
+           name:'student',
+           component:()=>import('../views/student/student')
+         }
       ]
-    }
+    },
+    
+   
    
 ]
 
